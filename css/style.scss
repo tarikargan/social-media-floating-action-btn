@@ -1,0 +1,130 @@
+.social-media{
+    width: 40px;
+    height: 45px;
+    position: fixed;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition:0.4s;
+    z-index: 999999;
+  }
+  
+  .social-media .bee{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: -45px;
+    animation: bee_anim 2s infinite both ease-in-out;
+    cursor: pointer;
+  }
+  .social-media.open .bee{
+    top:-65px;
+  }
+  
+  @keyframes bee_anim{
+    0%,100%{
+      transform: translateY(0px) scale(0.6);
+      opacity: 0.6;
+  
+    }
+    45%{
+      transform: translateY(-80px) scale(1) ;
+      opacity: 1;
+    }
+  }
+  .social-media .bee img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .social-media .toggle-btn{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 45px;
+    z-index: 6;
+    background: #aaa;
+    cursor: pointer;
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+  }
+  .social-media .toggle-btn i{
+    transition: all 1.2s ease-in-out;
+  }
+  
+  .social-media.open .toggle-btn i{
+    transform: rotateZ(405deg);
+  }
+  
+  .social-media .icon{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 1.1em;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    line-height: 45px;
+    background: rgb(253, 202, 32);
+    color: #fff;
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+    transition: 0.8s ease-in-out;
+    cursor: pointer;
+    opacity: 0.4;
+  }
+  
+  .social-media .icon:hover{
+    opacity: 1;
+    transform:rotateZ(360deg) ;
+  }
+  
+  /* locate icon */
+  
+  .social-media.open .ico-1{
+    left: -44px;
+  }
+  
+  .social-media.open .ico-2{
+    left: -22px;
+    top: -37px;
+  }
+  
+  .social-media.open .ico-3{
+    left: -22px;
+    top: 37px;
+  }
+  
+  .social-media.open .ico-4{
+    left: 22px;
+    top: -37px ;
+  }
+  
+  .social-media.open .ico-5{
+    left: 22px;
+    top: 37px;
+  }
+  
+  .social-media .ico-1:hover{
+    background: #3b5999;
+  }
+  .social-media .ico-2:hover{
+    background: #0077B5;
+  }
+  
+  .social-media .ico-3:hover{
+    background: #55acee;
+  }
+  
+  .social-media .ico-4:hover{
+    background: #e4405f;
+  }
+  
+  .social-media .ico-5:hover{
+    background: #cd201f;
+  }
+  
